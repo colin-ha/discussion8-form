@@ -1,6 +1,29 @@
   /* Create an accessible color palette using var()function */
   /* https://www.w3schools.com/css/css3_variables.asp */
-  
+
+:root{
+    --light-greenish-blue: #55efc4;
+    --mint-leaf: #00b894;
+    --faded-poster: #81ecec;
+    --robins-egg-blue: #00cec9;
+    --green-darner-tail: #74b9ff;
+    --electron-blue: #0984e3;
+    --shy-moment: #a29bfe;
+    --exodus-fruit: #6c5ce7;
+    --sour-lemon: #ffeaa7;
+    --bright-yarrow: #fdcb6e;
+    --first-date: #fab1a0;
+    --orangeville: #e17055;
+    --pink-glamour: #ff7675;
+    --chi-gong: #d63031;
+    --pico8-pink: #fd79a8;
+    --prunus-avium: #e84393;
+    --city-lights: #dfe6e9;
+    --soothing-breeze: #b2bec3;
+    --american-river: #636e72;
+    --dracula-orchid: #2d3436;
+  }
+
   form {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -10,15 +33,14 @@
     margin: 20px auto;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    color: #702082;
-    background: #CFC096;
+    color: var(--dracula-orchid);
+    background-color: var(--city-lights);
   }
 
   .radio {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    /* background: #575294; */
-    color: #702082;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
   }
 
   #name {
@@ -26,21 +48,22 @@
     padding: 10px;
     font-size: 18px;
     font-weight: bold;
-    background: #CFC096;
-    color: #9B9A6D;
+    color: var(--electron-blue);
   }
 
   #message {
     width: 100%;
     padding: 10px;
     resize: vertical;
+    color: var(--electron-blue);
   }
 
   input,
   textarea {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--electron-blue);
     width: 100%;
+    margin-bottom: 20px;
   }
 
   input[type="submit"] {
@@ -51,8 +74,15 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 10px;
   }
 
   input[type="submit"]:hover {
     background-color: #45a049;
+    transition: all 0.3s ease-in-out;
+  }
+
+  form label{
+    text-align: right;
+    margin-right: 20px;
   }
